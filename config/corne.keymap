@@ -66,4 +66,22 @@
 		    >;
 		};
         };
+
+	behaviors {
+		bt_layer_hold {
+		    compatible = "zmk,behavior-hold-tap";
+		    #binding-cells = <0>;
+		    tapping-term-ms = <3000>;
+		    flavor = "hold-preferred";
+		    bindings = <&mo 3>;
+		};
+	};
+
+	combos {
+		bt_layer_combo {
+		    timeout-ms = <100>;
+		    key-positions = <LOWER_KEY_POSITION RAISE_KEY_POSITION>;
+		    bindings = <&bt_layer_hold>;
+		};
+	};
 };
