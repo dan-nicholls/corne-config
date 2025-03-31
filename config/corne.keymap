@@ -80,7 +80,7 @@
 	combos {
 		bt_layer_combo {
 		    timeout-ms = <100>;
-		    key-positions = <LOWER_KEY_POSITION RAISE_KEY_POSITION>;
+		    key-positions = <37 40>;
 		    bindings = <&bt_layer_hold>;
 		};
 	};
