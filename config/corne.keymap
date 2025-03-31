@@ -67,21 +67,11 @@
 		};
         };
 
-	behaviors {
-		bt_layer_hold: bt_layer_hold {
-		    compatible = "zmk,behavior-hold-tap";
-		    #binding-cells = <0>;
-		    tapping-term-ms = <3000>;
-		    flavor = "hold-preferred";
-		    bindings = <&trans &mo 3>;
-		};
-	};
-
 	combos {
 		bt_layer_combo {
-		    timeout-ms = <100>;
+		    timeout-ms = <200>;
 		    key-positions = <37 40>;
-		    bindings = <&bt_layer_hold>;
+		    bindings = <&mo 3>;
 		};
 	};
 };
