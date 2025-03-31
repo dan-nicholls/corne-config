@@ -67,11 +67,11 @@
 		};
         };
 
-	combos {
-		bt_layer_combo {
-		    timeout-ms = <200>;
-		    key-positions = <37 40>;
-		    bindings = <&mo 3>;
+	conditional_layers {
+		compatible = "zmk,conditional-layers";
+		tri_layer {
+		    if-layers = <1 2>;
+		    then-layer = <3>;
 		};
 	};
 };
