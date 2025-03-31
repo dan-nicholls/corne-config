@@ -73,7 +73,7 @@
 		    #binding-cells = <0>;
 		    tapping-term-ms = <3000>;
 		    flavor = "hold-preferred";
-		    bindings = <&mo 3>;
+		    bindings = <&trans>, <&mo 3>;
 		};
 	};
 
