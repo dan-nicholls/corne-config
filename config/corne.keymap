@@ -60,8 +60,8 @@
 		extra_layer {
 		    display-name = "EXTRA";
 		    bindings = <
-   &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp C_VOL_DN     &kp C_VOL_UP		&kp C_MUTE 		   &trans 		   &trans &trans
-   &trans &trans       &trans       &trans       &mkp LCLK    &mkp RCLK       &mkp MOVE_LEFT &mkp MOVE_UP  &mkp MOVE_DOWN &mkp MOVE_RIGHT &trans &trans
+   &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp C_VOL_DN   &kp C_VOL_UP	&kp C_MUTE 	   &trans 		   &trans &trans
+   &trans &trans       &trans       &trans       &mkp LCLK    &mkp RCLK    &mmv MOVE_LEFT &mmv MOVE_UP  &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans &trans
    &trans &trans       &bt BT_CLR   &trans       &trans       &trans       &kp C_BRI_DN   &kp C_BRI_UP 	&trans 		   &trans 		   &trans &trans
 			&trans   &trans       &trans       &trans &trans &trans
 		    >;
