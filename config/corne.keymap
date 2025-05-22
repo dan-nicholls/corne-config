@@ -11,8 +11,8 @@
 
 / {
 	behaviors {
-		bspcdel: backsapce_or_del {
-			compatible = "zmk,behvarior-mod-morph";
+		bspcdel: backspace_or_del {
+			compatible = "zmk,behaviors-mod-morph";
 			#binding-cells = <0>;
 			bindings = <&kp BSPC>, <&kp DEL>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
