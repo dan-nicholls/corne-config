@@ -11,15 +11,15 @@
 #define RHRM4 RCTRL
 
 // Mod Macro
-#define LHM1(_key) &hsl HRM1 _key
-#define LHM2(_key) &hml HRM2 _key
-#define LHM3(_key) &hml HRM3 _key
-#define LHM4(_key) &hml HRM4 _key
+#define LHM1(_key) &hsl LHRM1 _key
+#define LHM2(_key) &hml LHRM2 _key
+#define LHM3(_key) &hml LHRM3 _key
+#define LHM4(_key) &hml LHRM4 _key
 
-#define RHM1(_key) &hsl HRM1 _key
-#define RHM2(_key) &hml HRM2 _key
-#define RHM3(_key) &hml HRM3 _key
-#define LHM4(_key) &hml HRM4 _key
+#define RHM1(_key) &hsl RHRM1 _key
+#define RHM2(_key) &hml RHRM2 _key
+#define RHM3(_key) &hml RHRM3 _key
+#define RHM4(_key) &hml RHRM4 _key
 
 // Momentary Macro
 #define LMT1(_key) &mt LHRM1 _key
