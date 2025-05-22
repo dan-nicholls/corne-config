@@ -11,12 +11,11 @@
 
 / {
 	behaviors {
-		bspcdel: backspace_or_del {
+		bspc_del: bspc_del {
 			compatible = "zmk,behaviors-mod-morph";
 			#binding-cells = <0>;
 			bindings = <&kp BSPC>, <&kp DEL>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
+			mods = <(MOD_LSFT|MOD_RSFT)>; };
 	};
 };
 
@@ -32,7 +31,7 @@
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         display-name = "Base";
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &bspcdel
+   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &bspc_del
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
                   &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
@@ -46,7 +45,7 @@
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         display-name = "Lower";
                         bindings = <
-   &kp TAB   &kp N1 &kp N2 &kp N3   &kp N4 &kp N5     &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &bspcdel
+   &kp TAB   &kp N1 &kp N2 &kp N3   &kp N4 &kp N5     &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &bspc_del
    &kp LCTRL &kp N6 &kp N7 &kp N8   &kp N9 &kp N0     &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
    &kp LSHFT &trans &trans &trans   &trans &trans     &trans   &trans   &trans &trans    &trans &trans
                            &kp LGUI &mo 1  &kp SPACE  &kp RET  &mo 2    &kp RALT
@@ -61,7 +60,7 @@
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         display-name = "Raise";
                         bindings = <
-   &kp TAB   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT  &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &bspcdel
+   &kp TAB   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT  &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &bspc_del
    &kp LCTRL &trans   &trans &trans   &trans   &trans     &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
    &kp LSHFT &trans   &trans &trans   &trans   &trans     &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
                                &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
