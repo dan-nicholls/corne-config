@@ -32,8 +32,8 @@
 #define RMT4(_key) &mt RHRM4 _key
 
 #define DEFINE_HRM(_label, _name, _hold, _tap, _triggers, ...) \
-	_label: _name: {
-		compatible = "zmk,behaviour-hold-tap"; \
+	_label: _name { \
+		compatible = "zmk,behavior-hold-tap"; \
 		#binding-cells = <2>; \
 		flavor = "balanced"; \
 		tapping-term-ms = <200>; \
