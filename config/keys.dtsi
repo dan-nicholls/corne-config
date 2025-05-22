@@ -83,10 +83,10 @@
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RM0 RM1 RM2 RM3 RM4 RM5 RB0 RB1 RB2 RB3 RB4 RB5
 
 // Left Thumbs
-#define THUMB_L LF2 LF1 LF0
+#define THUMB_L LU2 LU1 LU0
 
 // Right Thumbs
-#define THUMB_R RF0 RF1 RF2
+#define THUMB_R RU0 RU1 RU2
 
 // Both Thumbs
 #define THUMBS THUMB_L THUMB_R
