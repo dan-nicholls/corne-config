@@ -1,3 +1,4 @@
+#include "keys.dtsi"
 
 #define LHRM1 LSHIFT
 #define LHRM2 LGUI
