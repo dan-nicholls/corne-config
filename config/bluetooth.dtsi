@@ -1,13 +1,13 @@
 / {
 	behaviors {
 		bt_sw: bt_switch {
-			compatible = "zmk, behavior-hold-tap";
+			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
 			label = "BT_SW";
-			flavor = "bind-preferred";
+			flavor = "hold-preferred";
 			tapping-term-ms = <1000>;
 
-			bindings = <&none &bt BTN_SEL 0>; 
+			bindings = <&none &bt BT_SEL 0>; 
 		};
 	};
 };
