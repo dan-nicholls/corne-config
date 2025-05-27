@@ -4,10 +4,12 @@
 			compatible = "zmk, behavior-hold-tap";
 			#binding-cells = <2>;
 			label = "BT_SW";
-			flavor = "bind-prefered";
+			flavor = "bind-preferred";
 			tapping-term-ms = <1000>;
+
+			bindings = <&none &bt BTN_SEL 0>; 
 		};
 	};
 };
 
-#define BT_SWITCH(_profile) &bt_sw &bt BT_SEL _profile &none
+#define BT_SWITCH(_profile) &bt_sw &none &bt BT_SEL _profile
