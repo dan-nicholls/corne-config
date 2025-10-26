@@ -1,3 +1,9 @@
+#define DEF_BT_SEL_MACRO(_n) \
+	bt_sel##_n: bt_sel##_n { \
+		compatible = "zmk,behavior-macro"; \
+		#binding-cells = <0>; \
+		bindings = < &bt BT_SEL _n>; \
+	}
 
 #define DEFINE_BT_SW(_label, _name, _hold, _tap, ...) \
 	_label: _name { \
@@ -11,11 +17,26 @@
 
 / {
 	behaviors {
-		DEFINE_BT_SW(bt_sw0, bt_sw0, &none, &bt BT_SEL 0);
-		DEFINE_BT_SW(bt_sw1, bt_sw1, &none, &bt BT_SEL 1);
-		DEFINE_BT_SW(bt_sw2, bt_sw2, &none, &bt BT_SEL 2);
-		DEFINE_BT_SW(bt_sw3, bt_sw3, &none, &bt BT_SEL 3);
-		DEFINE_BT_SW(bt_sw4, bt_sw4, &none, &bt BT_SEL 4);
-		DEFINE_BT_SW(bt_clr, bt_clr, &none, &bt BT_CLR);
+		DEF_BT_SEL_MACRO(0);
+		DEF_BT_SEL_MACRO(1);
+		DEF_BT_SEL_MACRO(2);
+		DEF_BT_SEL_MACRO(3);
+		DEF_BT_SEL_MACRO(4);
+
+		bt_clr_macro: bt_clr_macro {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = < &bt BT_CLR >;
+		};
+
+		bt_sw: bt_sw {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "hold-preferred";
+			tapping-term-ms = <1000>;
+		};
 	};
 };
+
+#define BT_SW(_n) &bt_sw &none &bt_sel##_n
+#define BT_CLR() &bt_sw &none &bt_clr_macro
