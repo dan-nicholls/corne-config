@@ -1,15 +1,21 @@
+
+#define DEFINE_BT_SW(_label, _name, _hold, _tap, ...) \
+	_label: _name { \
+		compatible = "zmk,behavior-hold-tap"; \
+		#binding-cells = <2>; \
+		flavor = "hold-preferred"; \
+		tapping-term-ms = <1000>; \
+		bindings = <_hold>, <_tap>; \
+		__VA_ARGS__ \
+	}
+
 / {
 	behaviors {
-		bt_sw: bt_switch {
-			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <2>;
-			label = "BT_SW";
-			flavor = "hold-preferred";
-			tapping-term-ms = <1000>;
-
-			bindings = <&none &bt BT_SEL 0>; 
-		};
+		DEFINE_BT_SW(bt_sw0, bt_sw0, &none, &bt BT_SEL_0);
+		DEFINE_BT_SW(bt_sw1, bt_sw1, &none, &bt BT_SEL_1);
+		DEFINE_BT_SW(bt_sw2, bt_sw2, &none, &bt BT_SEL_2);
+		DEFINE_BT_SW(bt_sw3, bt_sw3, &none, &bt BT_SEL_3);
+		DEFINE_BT_SW(bt_sw4, bt_sw4, &none, &bt BT_SEL_4);
+		DEFINE_BT_SW(bt_clr, bt_clr, &none, &bt BT_CLR);
 	};
 };
-
-#define BT_SWITCH(_profile) &bt_sw &none &bt BT_SEL _profile
