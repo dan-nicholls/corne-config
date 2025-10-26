@@ -1,5 +1,5 @@
 #define BT_SW(_n) &bt_sw &none &bt_sel##_n
-#define BT_CLR() &bt_sw &none &bt_clr_macro
+#define BT_CLR_TST() &bt_sw &none &bt_clr_macro
 
 #define DEF_BT_SEL_MACRO(_n) \
 	bt_sel##_n: bt_sel##_n { \
