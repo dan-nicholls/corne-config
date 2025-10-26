@@ -11,11 +11,11 @@
 
 / {
 	behaviors {
-		DEFINE_BT_SW(bt_sw0, bt_sw0, &none, &bt BT_SEL_0);
-		DEFINE_BT_SW(bt_sw1, bt_sw1, &none, &bt BT_SEL_1);
-		DEFINE_BT_SW(bt_sw2, bt_sw2, &none, &bt BT_SEL_2);
-		DEFINE_BT_SW(bt_sw3, bt_sw3, &none, &bt BT_SEL_3);
-		DEFINE_BT_SW(bt_sw4, bt_sw4, &none, &bt BT_SEL_4);
+		DEFINE_BT_SW(bt_sw0, bt_sw0, &none, &bt BT_SEL 0);
+		DEFINE_BT_SW(bt_sw1, bt_sw1, &none, &bt BT_SEL 1);
+		DEFINE_BT_SW(bt_sw2, bt_sw2, &none, &bt BT_SEL 2);
+		DEFINE_BT_SW(bt_sw3, bt_sw3, &none, &bt BT_SEL 3);
+		DEFINE_BT_SW(bt_sw4, bt_sw4, &none, &bt BT_SEL 4);
 		DEFINE_BT_SW(bt_clr, bt_clr, &none, &bt BT_CLR);
 	};
 };
