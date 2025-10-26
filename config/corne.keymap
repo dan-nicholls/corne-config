@@ -19,7 +19,8 @@
 		bspc_del: bspc_del {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&kp BSPC>, <&kp DEL>;
+			bindings = <&kp BSPC>, <&kp BSPC>;
+			//bindings = <&kp BSPC>, <&kp DEL>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 	};
