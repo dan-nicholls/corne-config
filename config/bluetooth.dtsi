@@ -22,6 +22,12 @@
 			bindings = < &bt BT_CLR >;
 		};
 
+		bt_sel_0_tst: bt_sel_0_tst {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = < &bt BT_SEL 0 >;
+		};
+
 		bt_sel_1_tst: bt_sel_1_tst {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
@@ -34,10 +40,30 @@
 			bindings = < &bt BT_SEL 2 >;
 		};
 
+		bt_sel_3_tst: bt_sel_3_tst {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = < &bt BT_SEL 3 >;
+		};
+
+		bt_sel_4_tst: bt_sel_4_tst {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = < &bt BT_SEL 4 >;
+		};
+
+		bt_sw_0_tst: bt_sw_0_tst {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "tap-preferred";
+			tapping-term-ms = <1000>;
+			bindings = <&none>, <&bt_sel_0_tst>;
+		};
+
 		bt_sw_1_tst: bt_sw_1_tst {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
-			flavor = "hold-preferred";
+			flavor = "tap-preferred";
 			tapping-term-ms = <1000>;
 			bindings = <&none>, <&bt_sel_1_tst>;
 		};
@@ -45,15 +71,31 @@
 		bt_sw_2_tst: bt_sw_2_tst {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
-			flavor = "hold-preferred";
+			flavor = "tap-preferred";
 			tapping-term-ms = <1000>;
 			bindings = <&none>, <&bt_sel_2_tst>;
+		};
+
+		bt_sw_3_tst: bt_sw_3_tst {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "tap-preferred";
+			tapping-term-ms = <1000>;
+			bindings = <&none>, <&bt_sel_3_tst>;
+		};
+
+		bt_sw_4_tst: bt_sw_4_tst {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "tap-preferred";
+			tapping-term-ms = <1000>;
+			bindings = <&none>, <&bt_sel_4_tst>;
 		};
 
 		bt_sw: bt_sw {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
-			flavor = "hold-preferred";
+			flavor = "tap-preferred";
 			tapping-term-ms = <1000>;
 			bindings = <&kp>, <&kp>;
 		};
