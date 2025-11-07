@@ -50,10 +50,10 @@
     // The firs behavior is for homerow mods that are NOT the shift key, so
     // we're free to use the `require-prior-idle-ms` property
     DEFINE_HRM(hml, home_row_mod_left, &kp, &kp, KEYS_R THUMBS,
-      require-prior-idle-ms = <100>;
+      require-prior-idle-ms = <80>;
     );
     DEFINE_HRM(hmr, home_row_mod_right, &kp, &kp, KEYS_L THUMBS,
-      require-prior-idle-ms = <100>;
+      require-prior-idle-ms = <80>;
     );
 
     // Then, we have to define a behavior like the one before, but for the shift
